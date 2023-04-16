@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        font-family: sans-serif;
+        margin: 0;
+      }
+      .messageBodyContainer {
+        height: auto;
+        width: 100%;
+        background-color: rgb(248, 247, 247);
+      }
+      .header {
+        height: auto;
+        text-align: justify;
+        padding: 2rem;
+      }
+      .header h1 {
+        /* margin: 1rem 0; */
+        font-size: 2rem;
+      }
+      .header h4 {
+        font-size: 1.2rem;
+      }
+      .detailsBar {
+        width: 65%;
+        margin: 1rem 2rem 4rem 2rem;
+      }
+      .detailbar-title {
+        font-size: 1.2rem;
+        padding-bottom: 1rem;
+        font-weight: bold;
+      }
+      .detail-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 0.5px solid rgb(197, 196, 196);
+        padding: 0.2rem;
+      }
+      .detail-title {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+        font-weight: bold;
+      }
+      .detail-info {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+      }
+      .footer {
+        background-color: rgb(0, 0, 0);
+        height: auto;
+        width: 100%;
+        text-align: center;
+      }
+      .logo {
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="messageBodyContainer">
+        <div class="header">
+          <h1>Hey {{issuer}},</h1>
+          <h4>{{solver}} has rejected your report!</h4>
+        </div>
+        <div class="detailsBar">
+          <p class="detailbar-title">Details:</p>
+          <div class="detail-wrapper">
+            <p class="detail-title">Rejected report title:</p>
+            <p class="detail-info">{{title}}</p>
+          </div>
+          <div class="detail-wrapper">
+            <p class="detail-title">Rejected report description:</p>
+            <p class="detail-info">{{description}}</p>
+          </div>
+          <div class="detail-wrapper">
+            <p class="detail-title">Order:</p>
+            <p class="detail-info">{{order}}</p>
+          </div>
+          <div class="detail-wrapper">
+            <p class="detail-title">Date:</p>
+            <p class="detail-info">{{date}}</p>
+          </div>
+          <div class="detail-wrapper">
+            <p class="detail-title">Report title:</p>
+            <p class="detail-info">{{reportTitle}}</p>
+          </div>
+          <div class="detail-wrapper">
+            <p class="detail-title">Report description:</p>
+            <p class="detail-info">{{reportDescription}}</p>
+          </div>
+          <div class="detail-wrapper">
+            <p class="detail-title">Issuer:</p>
+            <p class="detail-info">{{issuer}}</p>
+          </div>
+          <div class="detail-wrapper">
+            <p class="detail-title">Service desk:</p>
+            <p class="detail-info">{{solver}}</p>
+          </div>
+          <div class="detail-wrapper">
+            <p class="detail-title">Office:</p>
+            <p class="detail-info">{{office}}</p>
+          </div>
+          <div class="detail-wrapper">
+            <p class="detail-title">Status:</p>
+            <p class="detail-info">{{status}}</p>
+          </div>
+        </div>
+        <div class="footer">
+          <img src="cid:unique@kreata.ee" alt="globant-logo" class="logo" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
