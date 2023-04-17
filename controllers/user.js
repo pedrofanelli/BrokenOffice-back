@@ -26,7 +26,7 @@ class UserController {
       }
       const { token, payload } = generatePayload(data);
       res.cookie("token", token);
-      res.status(200).send(payload);
+      res.status(200).send({ user: payload, token: token });
     } catch (error) {
       res.status(404).send(error);
     }
@@ -62,7 +62,7 @@ class UserController {
       if (!isValid) return res.status(401).send("Invalid credentials");
       const { token, payload } = generatePayload(data);
       res.cookie("token", token);
-      res.status(200).send(payload);
+      res.status(200).send({ user: payload, token: token });
     } catch (error) {
       res.status(404).send(error);
     }
@@ -93,7 +93,7 @@ class UserController {
       }
       const { token, payload } = generatePayload(data);
       res.cookie("token", token);
-      res.status(201).send(payload);
+      res.status(201).send({ user: payload, token: token });
     } catch (error) {
       res.status(404).send(error);
     }
