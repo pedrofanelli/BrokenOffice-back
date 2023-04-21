@@ -1,5 +1,5 @@
 # Broken Office (Back-end) 
-https://d1w75bllqpy7f0.cloudfront.net/
+Deploy in AWS: https://d1w75bllqpy7f0.cloudfront.net/
 
 Broken Office is a mobile first application that reports problems and damaged items in the offices or homes of "Globers" (workers of Globant) using geolocation and machine learning (with a trained AI).
 
