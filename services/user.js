@@ -34,7 +34,7 @@ class UserServices {
 
   static async createPassLink(email, token) {
     const expiration = new Date(Date.now() + 7200 * 1000)
-    const tokenUrl = `http://localhost:3000/user/restore/password/${token}`;
+    const tokenUrl = `https://d1w75bllqpy7f0.cloudfront.net/user/restore/password/${token}`;
     try {
       const exist = await Restore.findOne({ email });
       if (!exist) {
