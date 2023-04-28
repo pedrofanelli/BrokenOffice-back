@@ -105,7 +105,7 @@ class UserController {
       const { error, data } = await UserServices.findOneByEmail(email);
       if (error) return res.status(404).send(data);
       if (!data) return res.status(404).send("Invalid credentials")
-      const { token, payload } = generatePayloadRestore(data)
+      const { token, payload } = generatePayloadRestore(data);
       const withoutDot = token.replace(/\./g, "");
       const tokenUrl = await UserServices.createPassLink(email, withoutDot)
       if (tokenUrl.error) return res.status(404).send("Invalid credentials");
